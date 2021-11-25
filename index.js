@@ -39,8 +39,8 @@ const {
 	dev
 } = require('./lib/config.json')
 
-prefix = '.'
-fake = 'ArulBotz\nStatus : Online'
+prefix = '!'
+fake = 'ArulGanz\nStatus : Online'
 let gambar = "" || fs.readFileSync('./media/gambar/biasa.png')
 self = true
 blocked = []
@@ -49,8 +49,8 @@ blocked = []
 pebz.ReconnectMode = 2
 pebz.logger.level = 'warn'
 pebz.version = [2, 2143, 8]
-pebz.browserDescription = ['ArulBot', 'Safari', '3.0']
-console.log('>', '[',color('Berhasil Tersambung Ke Perangkat','lime'),']','ArulGanz')
+pebz.browserDescription = ['ArulBotz', 'Safari', '3.0']
+console.log('>', '[',color('Berhasil Tersambung Ke Perangkat','lime'),']','FEBSELF')
 pebz.on('qr', qr => {
 qrcode.generate(qr, { small : true })
 console.log(color(`[ BOT ] SCAN QR DI ATAS BRO`,'white'))
@@ -402,7 +402,8 @@ ${p}➸ ${prefix}topdf <reply img>${p}
 Made With❣️
 `           
            but = [
-          { buttonId: `${prefix}owner1`, buttonText: { displayText: 'CREATOR & OWNER' }, type: 1 }, { buttonId: `${prefix}ruls`, buttonText: { displayText: 'RULES BOTZ' }, type: 1 }
+          { buttonId: `${prefix}owner1`, buttonText: { displayText: 'creator' }, type: 1 },
+          { buttonId: `${prefix}ruls`, buttonText: { displayText: 'rulesbot' }, type: 1 }
                   ]
         sendButLocation(from, tod, tod2, gambar, but)
            break
@@ -631,8 +632,8 @@ break
 	      const hayokamu = await pebz.downloadAndSaveMediaMessage(patrcik, `./trash/${sender}`)
 		  getimg = await uploadImages(media1, false)
 		  kamu = await getBuffer(`http://lolhuman.herokuapp.com/api/convert/towebpwround?apikey=${lol}&img=${getimg}`) 
-		  const packnamenya = 'BotWhatsapp'
-          const authornya = 'ArulBot'
+		  const packnamenya = 'selfbot'
+          const authornya = 'LordPebri'
 		  exif.create(packnamenya, authornya, `biasalah_${sender}`)
 		  exec(`webpmux -set exif ./trash/biasalah_${sender}.exif ./trash/${sender}.webp -o ./trash/${sender}.webp`, async (error) => {
 		  await pebz.sendMessage(from, fs.readFileSync(`./trash/${sender}.webp`), sticker, {quoted:mek}).catch((err) => reply('error')) 
@@ -755,7 +756,7 @@ break
          pebz.sendMessage(from, {displayName: `Creator Bot`, vcard: vcard2}, contact, 
          { quoted: fkontak, 
          })
-         reply('*_Jangan Lupa Follow _*\nhttps://instagram.com/_daaa_1')
+         reply('*_Jangan Lupa Subscrib_*\nhttps://youtube.com/c/ArulGanz')
          break
           case 'bc':
          if (!isOwner) return reply('LU BUKAN OWNER GBLOK')
@@ -765,7 +766,7 @@ break
          const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
          bc = await pebz.downloadMediaMessage(encmedia)
          for (let _ of anu) {
-         pebz.sendMessage(_.jid, bc, image, { caption: `[ Arul Broadcast ]\n\n${body.slice(4)}` })
+         pebz.sendMessage(_.jid, bc, image, { caption: `[ PebselfBot izin Broadcast ]\n\n${body.slice(4)}` })
          }
          reply('Suksess broadcast')
          } else {
