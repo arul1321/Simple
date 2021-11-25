@@ -499,6 +499,15 @@ break
            pdf = await getBuffer(`https://api.lolhuman.xyz/docs/converter?apikey=687424ba062dfbbc4c7a6d59&img=${getpng}`)
            pebz.sendMessage(from, pdf, document, { mimetype: Mimetype.pdf, quoted:mek }).catch((err) => reply('error'))
            break
+           case 'wasted':
+           if (!isQuotedImage) return reply('image nya di reply')
+           const ida = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace("quotedM","m")).message.extendedTextMessage.contextInfo : mek
+           const idk = await pebz.downloadMediaMessage(ida, 'buffer') 
+           const getpng = await uploadImages(idk, false)  
+           reply(mess.wait)
+           pdf = await getBuffer(`https://api.lolhuman.xyz/api/editor/wasted?apikey=687424ba062dfbbc4c7a6d59&img=${getjpg}`)
+           pebz.sendMessage(from, pdf, document, { mimetype: Mimetype.pdf, quoted:mek }).catch((err) => reply('error'))
+           break
            case 'removebg':
            if (!isQuotedImage) return reply('reply gambar nya') 
            const biasalah = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace("quotedM","m")).message.extendedTextMessage.contextInfo : mek
