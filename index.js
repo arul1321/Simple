@@ -402,8 +402,8 @@ ${p}➸ ${prefix}topdf <reply img>${p}
 Made With❣️
 `           
            but = [
-          { buttonId: `${prefix}owner1`, buttonText: { displayText: 'creator' }, type: 1 },
-          { buttonId: `${prefix}ruls`, buttonText: { displayText: 'rulesbot' }, type: 1 }
+          { buttonId: `${prefix}owner1`, buttonText: { displayText: 'OWNER' }, type: 1 },
+          { buttonId: `${prefix}ruls`, buttonText: { displayText: 'RULES BOTZ' }, type: 1 }
                   ]
         sendButLocation(from, tod, tod2, gambar, but)
            break
@@ -633,7 +633,7 @@ break
 		  getimg = await uploadImages(media1, false)
 		  kamu = await getBuffer(`http://lolhuman.herokuapp.com/api/convert/towebpwround?apikey=${lol}&img=${getimg}`) 
 		  const packnamenya = 'selfbot'
-          const authornya = 'LordPebri'
+          const authornya = 'ArulGanz'
 		  exif.create(packnamenya, authornya, `biasalah_${sender}`)
 		  exec(`webpmux -set exif ./trash/biasalah_${sender}.exif ./trash/${sender}.webp -o ./trash/${sender}.webp`, async (error) => {
 		  await pebz.sendMessage(from, fs.readFileSync(`./trash/${sender}.webp`), sticker, {quoted:mek}).catch((err) => reply('error')) 
