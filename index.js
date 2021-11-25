@@ -496,7 +496,7 @@ break
            const idk = await pebz.downloadMediaMessage(ida, 'buffer') 
            const getpng = await uploadImages(idk, false)  
            reply(mess.wait)
-           pdf = await getBuffer(`http://lolhuman.herokuapp.com/api/convert/imgtopdf?apikey=${lol}&img=${getpng}`)
+           pdf = await getBuffer(`https://api.lolhuman.xyz/docs/converter?apikey=687424ba062dfbbc4c7a6d59&img=${getpng}`)
            pebz.sendMessage(from, pdf, document, { mimetype: Mimetype.pdf, quoted:mek }).catch((err) => reply('error'))
            break
            case 'removebg':
