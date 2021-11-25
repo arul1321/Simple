@@ -39,8 +39,8 @@ const {
 	dev
 } = require('./lib/config.json')
 
-prefix = '!'
-fake = '𝗙𝗘𝗕𝗭𝗦𝗘𝗟𝗙\nStatus : Online'
+prefix = '.'
+fake = 'ArulBotz\nStatus : Online'
 let gambar = "" || fs.readFileSync('./media/gambar/biasa.png')
 self = true
 blocked = []
@@ -49,8 +49,8 @@ blocked = []
 pebz.ReconnectMode = 2
 pebz.logger.level = 'warn'
 pebz.version = [2, 2143, 8]
-pebz.browserDescription = ['CikoBot', 'Safari', '3.0']
-console.log('>', '[',color('Berhasil Tersambung Ke Perangkat','lime'),']','FEBSELF')
+pebz.browserDescription = ['ArulBot', 'Safari', '3.0']
+console.log('>', '[',color('Berhasil Tersambung Ke Perangkat','lime'),']','ArulGanz')
 pebz.on('qr', qr => {
 qrcode.generate(qr, { small : true })
 console.log(color(`[ BOT ] SCAN QR DI ATAS BRO`,'white'))
@@ -76,7 +76,7 @@ pebz.on('credentials-updated', () => {
 		calling = JSON.parse(JSON.stringify(json))
 		call = calling[1].from
 		setTimeout(function(){
-			pebz.sendMessage(call, 'Maaf, saya tidak bisa menerima panggilan. nelfon = block!.\nJika ingin membuka block harap chat Owner!\nhttps//wa.me/+6285849261085', MessageType.text)
+			pebz.sendMessage(call, 'Maaf, saya tidak bisa menerima panggilan. nelfon = block!.\nJika ingin membuka block harap chat Owner!\nhttps//wa.me/+6281229859085', MessageType.text)
 			.then(() => pebz.blockUser(call, "add"))
 			}, 100);
 		})
@@ -141,7 +141,7 @@ pebz.on('credentials-updated', () => {
 			const isCmd = body.startsWith(prefix)
            
             const botNumber = pebz.user.jid
-			const ownerNumber = ['6285849261085@s.whatsapp.net']
+			const ownerNumber = ['6281229859085@s.whatsapp.net']
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			pushname = pebz.contacts[sender] != undefined ? pebz.contacts[sender].vname || pebz.contacts[sender].notify : undefined
@@ -402,8 +402,7 @@ ${p}➸ ${prefix}topdf <reply img>${p}
 Made With❣️
 `           
            but = [
-          { buttonId: `${prefix}owner1`, buttonText: { displayText: 'creator' }, type: 1 },
-          { buttonId: `${prefix}ruls`, buttonText: { displayText: 'rulesbot' }, type: 1 }
+          { buttonId: `${prefix}owner1`, buttonText: { displayText: 'CREATOR & OWNER' }, type: 1 }, { buttonId: `${prefix}ruls`, buttonText: { displayText: 'RULES BOTZ' }, type: 1 }
                   ]
         sendButLocation(from, tod, tod2, gambar, but)
            break
@@ -632,8 +631,8 @@ break
 	      const hayokamu = await pebz.downloadAndSaveMediaMessage(patrcik, `./trash/${sender}`)
 		  getimg = await uploadImages(media1, false)
 		  kamu = await getBuffer(`http://lolhuman.herokuapp.com/api/convert/towebpwround?apikey=${lol}&img=${getimg}`) 
-		  const packnamenya = 'selfbot'
-          const authornya = 'LordPebri'
+		  const packnamenya = 'BotWhatsapp'
+          const authornya = 'ArulBot'
 		  exif.create(packnamenya, authornya, `biasalah_${sender}`)
 		  exec(`webpmux -set exif ./trash/biasalah_${sender}.exif ./trash/${sender}.webp -o ./trash/${sender}.webp`, async (error) => {
 		  await pebz.sendMessage(from, fs.readFileSync(`./trash/${sender}.webp`), sticker, {quoted:mek}).catch((err) => reply('error')) 
@@ -751,12 +750,12 @@ break
          + 'VERSION:3.0\n'
          + `FN:LordPebri\n`
          + `ORG: Creator Bot ;\n`
-         + `TEL;type=CELL;type=VOICE;waid=6285849261085:6285849261085\n`
+         + `TEL;type=CELL;type=VOICE;waid=6281229859085:6281229859085\n`
          + 'END:VCARD'.trim()
          pebz.sendMessage(from, {displayName: `Creator Bot`, vcard: vcard2}, contact, 
          { quoted: fkontak, 
          })
-         reply('*_Jangan Lupa Subscrib_*\nhttps://youtube.com/c/FEBZABOTZ')
+         reply('*_Jangan Lupa Follow _*\nhttps://instagram.com/_daaa_1')
          break
           case 'bc':
          if (!isOwner) return reply('LU BUKAN OWNER GBLOK')
@@ -766,7 +765,7 @@ break
          const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
          bc = await pebz.downloadMediaMessage(encmedia)
          for (let _ of anu) {
-         pebz.sendMessage(_.jid, bc, image, { caption: `[ PebselfBot izin Broadcast ]\n\n${body.slice(4)}` })
+         pebz.sendMessage(_.jid, bc, image, { caption: `[ Arul Broadcast ]\n\n${body.slice(4)}` })
          }
          reply('Suksess broadcast')
          } else {
