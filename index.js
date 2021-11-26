@@ -399,7 +399,7 @@ ${p}➸ ${prefix}play <judul lagunya>${p}
 ${p}➸ ${prefix}removebg <reply img>${p}
 ${p}➸ ${prefix}topdf <reply img>${p}
 
-Made With❣️
+�BotWhatsapp By Arul Ganz
 `           
            but = [
           { buttonId: `${prefix}owner1`, buttonText: { displayText: 'OWNER' }, type: 1 },
@@ -749,14 +749,14 @@ break
          }
          vcard2 = 'BEGIN:VCARD\n'
          + 'VERSION:3.0\n'
-         + `FN:LordPebri\n`
+         + `FN:ArulGanz\n`
          + `ORG: Creator Bot ;\n`
          + `TEL;type=CELL;type=VOICE;waid=6281229859085:6281229859085\n`
          + 'END:VCARD'.trim()
          pebz.sendMessage(from, {displayName: `Creator Bot`, vcard: vcard2}, contact, 
          { quoted: fkontak, 
          })
-         reply('*_Jangan Lupa Subscrib_*\nhttps://youtube.com/c/ArulGanz')
+         reply('*_Jangan Lupa Follow Instagram _daaa_1')
          break
           case 'bc':
          if (!isOwner) return reply('LU BUKAN OWNER GBLOK')
@@ -766,13 +766,17 @@ break
          const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
          bc = await pebz.downloadMediaMessage(encmedia)
          for (let _ of anu) {
-         pebz.sendMessage(_.jid, bc, image, { caption: `[ PebselfBot izin Broadcast ]\n\n${body.slice(4)}` })
+         pebz.sendMessage(_.jid, bc, image, { caption: `[ Broadcast ]\n\n${body.slice(4)}` })
          }
          reply('Suksess broadcast')
          } else {
          for (let _ of anu) {
          sendMess(_.jid, `[ *BOT BROADCAST* ]\n\n${body.slice(4)}`)
          }
+         but = [
+          { buttonId: `${prefix}owner1`, buttonText: { displayText: 'OWNER' }, type: 1 },
+          { buttonId: `${prefix}ruls`, buttonText: { displayText: 'RULES BOTZ' }, type: 1 }
+                  ]
          reply('Suksess broadcast')
          }
          break
