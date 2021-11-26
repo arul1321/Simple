@@ -745,39 +745,21 @@ break
          })
          reply('Jangan Lupa Follow Instagram Owner') 
          break
-         case 'instagram'
-         const tod = `*JANGAN LUPA FOLLOW INSTAGRAM OWNER\nhttps://instagram.com/_daaa_1*`
-       
-         ©BotWhatsapp By ArulGanz
-         `
-         but = [
-          { buttonId: `${prefix}menu`, buttonText: { displayText: 'MENU' }, type: 1 },
-          { buttonId: `${prefix}ruls`, buttonText: { displayText: 'RULES BOTZ' }, type: 1 }
-                  ]
-        sendButLocation(from, tod, tod2, gambar, but)
-         
           case 'bc':
-         if (!isOwner) return reply('LU BUKAN OWNER GBLOK')
-         if (args.length < 1) return reply('.......')
-         anu = await pebz.chats.all()
-         if (isMedia && !mek.message.videoMessage || isQuotedImage) {
-         const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-         bc = await pebz.downloadMediaMessage(encmedia)
-         for (let _ of anu) {
-         pebz.sendMessage(_.jid, bc, image, { caption: `[ Broadcast ]\n\n${body.slice(4)}` })
-         }
-         reply('Suksess broadcast')
-         } else {
-         for (let _ of anu) {
-         sendMess(_.jid, `[ *BOT BROADCAST* ]\n\n${body.slice(4)}`)
-         }
-         but = [
-          { buttonId: `${prefix}owner1`, buttonText: { displayText: 'OWNER' }, type: 1 },
-          { buttonId: `${prefix}ruls`, buttonText: { displayText: 'RULES BOTZ' }, type: 1 }
-                  ]
-         reply('Suksess broadcast')
-         }
-         break
+if (!isOwner) return reply('LU BUKAN OWNER GBLOK')
+if (args.length < 1) return reply('Teksnya?')
+anu = await pebz.chats.all()
+for (let _ of anu) {
+buttonss = [{buttonId: `${prefix}menu`, buttonText: {displayText: 'MENU'}, type: 1},{buttonId: `${prefix}owner1`, buttonText: {displayText: 'OWNER'}, type: 1}]
+const btnbc = {
+footerText: '*©ArulBotz*',
+buttons: buttonss,
+headerType: 1
+}
+await pebz.sendMessage(_.jid, btnbc, MessageType.buttonsMessage)
+}
+reply(`Sukses mengirim Broadcast`)
+break
           case 'attp':      
           if (args.length < 1) return reply(mess.notxt)
           const haw = args.join('')
