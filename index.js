@@ -743,8 +743,31 @@ break
          pebz.sendMessage(from, {displayName: `Creator Bot`, vcard: vcard2}, contact, 
          { quoted: fkontak, 
          })
-         reply('*_Jangan Lupa Follow Instagram _daaa_1')
+         reply(
+         'Jangan Lupa Follow Instagram Owner') 
+         but = [
+          { buttonId: `${prefix}instagram`, buttonText: { displayText: 'INSTAGRAM' }, type: 1 }
+                  ]
+        sendButLocation(from, reply, gambar, but)
          break
+         case 'instagram'
+         var p = '```'
+         const tod = `*JANGAN LUPA FOLLOW INSTAGRAM OWNER\nhttps://instagram.com/_daaa_1*`
+         tod3 =`
+         ${p}1. DM KALAU MAU FOLLOW BACK${p} 
+         ${p}2. BAKAL DI FOLLOW BACK KETIKA BUKA IG${p}
+         ${p}3. JANGAN LUPA LIKE POSTINGAN NYA${p}
+         ${p}4. JANGAN SPAM DM${p}
+         ${p}5. DILARANG MENAUTKAN INSTAGRAM OWNER DALAM KONTEN APAPUN${p}
+          
+         ©BotWhatsapp By ArulGanz
+         `
+         but = [
+          { buttonId: `${prefix}menu`, buttonText: { displayText: 'MENU' }, type: 1 },
+          { buttonId: `${prefix}ruls`, buttonText: { displayText: 'RULES BOTZ' }, type: 1 }
+                  ]
+        sendButLocation(from, tod, tod2, gambar, but)
+         
           case 'bc':
          if (!isOwner) return reply('LU BUKAN OWNER GBLOK')
          if (args.length < 1) return reply('.......')
