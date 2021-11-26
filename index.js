@@ -410,9 +410,9 @@ ${p}➸ ${prefix}topdf <reply img>${p}
            
            
            case 'ruls':
-txt = `
-*「 PERATURAN BOT 」*
-
+           var p = '```'
+const ted = ` *「 PERATURAN BOT 」* `
+ted2 =`
 ${p}➸1. DILARANG TELFON BOT!!${p}
 ${p}➸2. DILARANG SPAM${p}
 ${p}➸3. DILARANG BERKATA KASAR${p}
@@ -422,27 +422,14 @@ ${p}➸6. DILARANG SPAM GROUP${p}
 ${p}➸7. DILARANG SPAM ADMIN${p}
 ${p}➸8. DILARANG BERKATA KASAR DI GC${p}
 
-⚠️JIKA KALIAN MELANGGAR.. AKAN DI BLOCK + BANNED!!`
-const pebz2 = {
-            contextInfo: {
-            participant: '0@s.whatsapp.net',
-            remoteJid: 'status@broadcast',
-            isForwarded: true,
-            forwardingScore: 8,
-           quotedMessage: {
-           imageMessage: {
-           caption: fake,
-           jpegThumbnail: gambar,
-           mimetype: 'image/jpeg',
-           }
-           }
-           }
-           } 
-           pebz.sendMessage(from, txt, MessageType.text, pebz2)
+�BotWhatsapp By ArulGanz
+`
+but = [
+          { buttonId: `${prefix}owner1`, buttonText: { displayText: 'OWNER' }, type: 1 },
+          { buttonId: `${prefix}menu`, buttonText: { displayText: 'BACK TO MENU' }, type: 1 }
+                  ]
+        sendButLocation(from, ted, ted2, gambar, but)
            break
-           
-           
-           
            case 'play':
 teks = args.join(' ')
 reply(mess.wait)
