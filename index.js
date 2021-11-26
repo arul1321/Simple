@@ -425,7 +425,7 @@ ${p}âž¸8. DILARANG BERKATA KASAR DI GC${p}
 ©BotWhatsapp By ArulGanz
 `
 but = [
-          { buttonId: `${prefix}owner1`, buttonText: { displayText: 'OWNER' }, type: 1 },
+          { buttonId: `${prefix}instagram`, buttonText: { displayText: 'INSTAGRAM' }, type: 1 },
           { buttonId: `${prefix}menu`, buttonText: { displayText: 'BACK TO MENU' }, type: 1 }
                   ]
         sendButLocation(from, ted, ted2, gambar, but)
@@ -743,12 +743,7 @@ break
          pebz.sendMessage(from, {displayName: `Creator Bot`, vcard: vcard2}, contact, 
          { quoted: fkontak, 
          })
-         reply(
-         'Jangan Lupa Follow Instagram Owner') 
-         but = [
-          { buttonId: `${prefix}instagram`, buttonText: { displayText: 'INSTAGRAM' }, type: 1 }
-                  ]
-        sendButLocation(from, reply, gambar, but)
+         reply('Jangan Lupa Follow Instagram Owner') 
          break
          case 'instagram'
          var p = '```'
