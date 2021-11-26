@@ -425,7 +425,7 @@ ${p}âž¸8. DILARANG BERKATA KASAR DI GC${p}
 ©BotWhatsapp By ArulGanz
 `
 but = [
-          { buttonId: `${prefix}instagram`, buttonText: { displayText: 'INSTAGRAM' }, type: 1 },
+          { buttonId: `${prefix}owner1`, buttonText: { displayText: 'INSTAGRA' }, type: 1 },
           { buttonId: `${prefix}menu`, buttonText: { displayText: 'BACK TO MENU' }, type: 1 }
                   ]
         sendButLocation(from, ted, ted2, gambar, but)
@@ -746,15 +746,8 @@ break
          reply('Jangan Lupa Follow Instagram Owner') 
          break
          case 'instagram'
-         var p = '```'
          const tod = `*JANGAN LUPA FOLLOW INSTAGRAM OWNER\nhttps://instagram.com/_daaa_1*`
-         tod3 =`
-         ${p}1. DM KALAU MAU FOLLOW BACK${p} 
-         ${p}2. BAKAL DI FOLLOW BACK KETIKA BUKA IG${p}
-         ${p}3. JANGAN LUPA LIKE POSTINGAN NYA${p}
-         ${p}4. JANGAN SPAM DM${p}
-         ${p}5. DILARANG MENAUTKAN INSTAGRAM OWNER DALAM KONTEN APAPUN${p}
-          
+       
          ©BotWhatsapp By ArulGanz
          `
          but = [
