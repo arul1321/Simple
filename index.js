@@ -19,10 +19,13 @@ const { exec } = require('child_process')
 const { fetchJson, color, bgcolor } = require('./lib/fetcher')
 const { y2mate } = require('./lib/y2mate');
 const { y2mateA, y2mateV } = require('./lib/y2mate.js')
+const { yta, ytv, igdl, upload, formatDate } = require('./lib/ytdl')
 const { wait, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close, uploadImages } = require('./lib/function')
 const fetch = require('node-fetch')
 const get = require('got')
 const speednye = require('performance-now')
+const speednya = require('performance-now')
+const speed2 = require('performance-now')
 const fs = require('fs')
 const os = require('os')
 const qrcode = require('qrcode-terminal')
@@ -384,31 +387,50 @@ const time2 = moment().tz("Asia/Makassar").format("HH:mm:ss");
              case 'help':             
 		     const hiya = await fetchJson('https://xinzbot-api.herokuapp.com/api/ucapan?apikey=XinzBot&timeZone=Asia/Jakarta', {method:'get'})
 		     var p = '```'
-		    const tod =`${p}SELFBOT${p}
-${p}${ucapanWaktu} kak ${pushname}${p}		    
-${p}prefix : ${prefix}${p}`
+		    const tod =`
+ 
+ *ARUL BOTZ*
+ ${p}Hai kak ${pushname}${p}		
+ ${p}Prefix : ${prefix}${p}
+ ${p}Runtime : ${kyun(uptime)}${p}
+
+`
 tod2 =`
-${p}➸ ${prefix}self${p}
-${p}➸ ${prefix}public${p}
-${p}➸ ${prefix}broadcast${p} 
-${p}➸ ${prefix}sticker${p} 
-${p}➸ ${prefix}sticker2${p} 
-${p}➸ ${prefix}nulis <text>${p}
-${p}➸ ${prefix}attp <text>${p}
-${p}➸ ${prefix}play <judul lagunya>${p}
-${p}➸ ${prefix}removebg <reply img>${p}
-${p}➸ ${prefix}topdf <reply img>${p}
-
-�BotWhatsapp By Arul Ganz
-`           
+  
+${p}1. ${prefix}sticker <reply img>${p}
+${p}2. ${prefix}sticker2 <reply img>${p}
+${p}3. ${prefix}toimg <reply sticker>${p}
+${p}4. ${prefix}wiki <query>${p}
+${p}5. ${prefix}pinterest <query>${p}
+${p}6. ${prefix}tourl <reply media>${p}
+${p}7. ${prefix}ssweb <Url>${p}
+   
+ ${p}1. ${prefix}bc <query>${p}                   
+ ${p}2. ${prefix}bc2 <query>${p}                
+ ${p}3. ${prefix}bcs <reply sticker>${p}     
+ ${p}4. ${prefix}bca <reply audio>${p}
+ ${p}5. ${prefix}bcv <reply gif/video>${p}
+
+  
+ ${p}1. ${prefix}setgc ${p}
+ ${p}2. ${prefix}tagall <query>${p}
+ ${p}3. ${prefix}hidetag <teks>${p}
+
+   
+ ${p}1. ${prefix}play <query>${p}                   
+ ${p}2. ${prefix}ytdl <url>${p}                
+ ${p}3. ${prefix}ytmp3 <url>${p}     
+ ${p}4. ${prefix}ytmp4 <url>${p}
+ ${p}4. ${prefix}ttwm <url>${p}
+ ${p}5. ${prefix}ttnowm <url>${p}
+
+ *Bot WhatsaApp by ArulGanz*
+`
            but = [
-          { buttonId: `${prefix}owner1`, buttonText: { displayText: 'OWNER' }, type: 1 },
-          { buttonId: `${prefix}ruls`, buttonText: { displayText: 'RULES BOTZ' }, type: 1 }
+          { buttonId: `${prefix}owner`, buttonText: { displayText: '```OWNER```' }, type: 1 }, { buttonId: `${prefix}patnerbot`, buttonText: { displayText: '```PATNER BOT```' }, type: 1 }
                   ]
         sendButLocation(from, tod, tod2, gambar, but)
            break
-           
-           
            case 'ruls':
            var p = '```'
 const ted = ` *「 PERATURAN BOT 」* `
