@@ -19,7 +19,6 @@ const { exec } = require('child_process')
 const { fetchJson, color, bgcolor } = require('./lib/fetcher')
 const { y2mate } = require('./lib/y2mate');
 const { y2mateA, y2mateV } = require('./lib/y2mate.js')
-const { yta, ytv, igdl, upload, formatDate } = require('./lib/ytdl')
 const { wait, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close, uploadImages } = require('./lib/function')
 const fetch = require('node-fetch')
 const get = require('got')
@@ -109,7 +108,7 @@ pebz.on('credentials-updated', () => {
                 ini_user = pebz.contacts[mem]
                 group_info = await pebz.groupMetadata(chat.jid)
                  ini_img = await getBuffer(`https://api.dapuhy.ga/api/canvas/goodbye2?name=${ini_user.notify}&discriminator=${group_info.participants.length}&member=${group_info.participants.length}&gcname=${group_info.subject}&pp=${pp_user}&bg=https://www.linkpicture.com/q/20211125_113317.jpg&apikey=lordpebri`)   
-                ini_out = `${ini_user.notify}, Sayonara 👋`
+                ini_out = `${ini_user.notify}, Sayonara ðŸ‘‹`
                 await pebz.sendMessage(chat.jid, ini_img, MessageType.image, { caption: ini_out})
             }
         } catch (e) {
@@ -284,7 +283,7 @@ console.log(e)
         
 	        mess = {
 				wait: 'tunggu sebentar.......',
-				success: 'Sucess ✓“',
+				success: 'Sucess âœ“â€œ',
 				notxt: 'textnya mana ?',
 				error: {
 					stick: 'gagal saat konvensi gambar ke sticker',
@@ -353,22 +352,22 @@ console.log(e)
         }
 const time2 = moment().tz("Asia/Makassar").format("HH:mm:ss");
     if (time2 < "24:59:00") {
-      var ucapanWaktu = "Selamat malam🌃";
+      var ucapanWaktu = "Selamat malamðŸŒƒ";
     }
     if (time2 < "19:00:00") {
-      var ucapanWaktu = "Selamat senja🌞";
+      var ucapanWaktu = "Selamat senjaðŸŒž";
     }
     if (time2 < "18:00:00") {
-      var ucapanWaktu = "Selamat sore🌄";
+      var ucapanWaktu = "Selamat soreðŸŒ„";
     }
     if (time2 < "15:00:00") {
-      var ucapanWaktu = "Selamat siang☀️";
+      var ucapanWaktu = "Selamat siangâ˜€ï¸";
     }
     if (time2 < "11:00:00") {
-      var ucapanWaktu = "Selamat pagi🌅";
+      var ucapanWaktu = "Selamat pagiðŸŒ…";
     }
     if (time2 < "05:00:00") {
-      var ucapanWaktu = "Selamat malam🌃";
+      var ucapanWaktu = "Selamat malamðŸŒƒ";
     }			
 			colors = ['red','white','black','blue','yellow','green']
 	     	const isMedia = (type === 'imageMessage' || type === 'videoMessage')
@@ -433,18 +432,18 @@ tod2 =`
            break
            case 'ruls':
            var p = '```'
-const ted = ` *「 PERATURAN BOT 」* `
+const ted = ` *ã€Œ PERATURAN BOT ã€* `
 ted2 =`
-${p}➸1. DILARANG TELFON BOT!!${p}
-${p}➸2. DILARANG SPAM${p}
-${p}➸3. DILARANG BERKATA KASAR${p}
-${p}➸4. DILARANG SPAM VIRTEX${p}
-${p}➸5. DILARANG TELEFON OWNER${p}
-${p}➸6. DILARANG SPAM GROUP${p}
-${p}➸7. DILARANG SPAM ADMIN${p}
-${p}➸8. DILARANG BERKATA KASAR DI GC${p}
+${p}âž¸1. DILARANG TELFON BOT!!${p}
+${p}âž¸2. DILARANG SPAM${p}
+${p}âž¸3. DILARANG BERKATA KASAR${p}
+${p}âž¸4. DILARANG SPAM VIRTEX${p}
+${p}âž¸5. DILARANG TELEFON OWNER${p}
+${p}âž¸6. DILARANG SPAM GROUP${p}
+${p}âž¸7. DILARANG SPAM ADMIN${p}
+${p}âž¸8. DILARANG BERKATA KASAR DI GC${p}
 
-�BotWhatsapp By ArulGanz
+©BotWhatsapp By ArulGanz
 `
 but = [
           { buttonId: `${prefix}owner1`, buttonText: { displayText: 'INSTAGRA' }, type: 1 },
@@ -459,14 +458,14 @@ if (!teks.endsWith("-doc")){
 resi = await yts(`${teks}`).catch(e => {
 reply('_[ ! ] Error Query Yang Anda Masukan Tidak Ada_')
 })
-let thumbInfo = `❒「  *Youtube Search*  」
-├ *Judul :* ${resi.all[0].title}
-├ *ID Video :* ${resi.all[0].videoId}
-├ *Diupload Pada :* ${resi.all[0].ago}
-├ *Views :* ${resi.all[0].views}
-├ *Durasi :* ${resi.all[0].timestamp}
-├ *Channel :* ${resi.all[0].author.name}
-└ *Link Channel :* ${resi.all[0].author.url}
+let thumbInfo = `â’ã€Œ  *Youtube Search*  ã€
+â”œ *Judul :* ${resi.all[0].title}
+â”œ *ID Video :* ${resi.all[0].videoId}
+â”œ *Diupload Pada :* ${resi.all[0].ago}
+â”œ *Views :* ${resi.all[0].views}
+â”œ *Durasi :* ${resi.all[0].timestamp}
+â”œ *Channel :* ${resi.all[0].author.name}
+â”” *Link Channel :* ${resi.all[0].author.url}
 
 *_Tunggu Proses Upload....._*
 `
@@ -481,14 +480,14 @@ const tec = teks.split("-doc")
 res = await yts(`${tec}`).catch(e => {
 reply('_[ ! ] Error Query Yang Anda Masukan Tidak Ada_')
 })
-let thumbInfo = `❒「  *${botname}*  」
-├ *Judul :* ${res.all[0].title}
-├ *ID Video :* ${res.all[0].videoId}
-├ *Diupload Pada :* ${res.all[0].ago}
-├ *Views :* ${res.all[0].views}
-├ *Durasi :* ${res.all[0].timestamp}
-├ *Channel :* ${res.all[0].author.name}
-└ *Link Channel :* ${res.all[0].author.url}
+let thumbInfo = `â’ã€Œ  *${botname}*  ã€
+â”œ *Judul :* ${res.all[0].title}
+â”œ *ID Video :* ${res.all[0].videoId}
+â”œ *Diupload Pada :* ${res.all[0].ago}
+â”œ *Views :* ${res.all[0].views}
+â”œ *Durasi :* ${res.all[0].timestamp}
+â”œ *Channel :* ${res.all[0].author.name}
+â”” *Link Channel :* ${res.all[0].author.url}
 
 *_Tunggu Proses Upload....._*
 `
@@ -544,7 +543,7 @@ break
            let ping = speednye() - pingnye 
            const { 
            os_version } = pebz.user.phone
-           let akutext =`_「STATUS」_
+           let akutext =`_ã€ŒSTATUSã€_
 *NAMA : ${pebz.user.name}*
 *BROWSER : ${pebz.browserDescription[1]}*
 *HOST : ${pebz.browserDescription[0]}*
@@ -774,7 +773,7 @@ anu = await pebz.chats.all()
 for (let _ of anu) {
 buttonss = [{buttonId: `${prefix}menu`, buttonText: {displayText: 'MENU'}, type: 1},{buttonId: `${prefix}owner1`, buttonText: {displayText: 'OWNER'}, type: 1}]
 const btnbc = {
-footerText: '*�ArulBotz*',
+footerText: '*©ArulBotz*',
 buttons: buttonss,
 headerType: 1
 }
